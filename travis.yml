@@ -47,13 +47,14 @@ install:
 
 script:
     ############################################################################
-    # Build main and tests
+    # Build main and tests tested
     ############################################################################
      - mkdir -p build
      - cd build
      - cmake ${CMAKE_OPTIONS} -DCMAKE_CXX_FLAGS=${CXX_FLAGS} -DCMAKE_BUILD_TYPE=Coverage -DBUILD_TESTS=ON .. 
      - make
      - make randomgen
-
+     
 after_success:
      - ./randomgen -h
+     
