@@ -7,6 +7,7 @@ using namespace cv;
 using namespace std;
 int main(void)
 {
+  std::cout << "Test" << std::endl;
   double alpha = 0.5;
   double beta;
   double input;
